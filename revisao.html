@@ -1,0 +1,47 @@
+<!--
+    Na prova foi cobrado:
+    ° Mensagem
+    ° Operadores Logicos
+    ° Operadores Matematicos
+    °Operadores Condicionais
+    ° Pegar dados do formulario
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Estou botando um id para chamar no javascript.
+        OBS: o nome do id não pode repetir!!
+    -->
+    Nota 01: <input type="text" id="n1"> <br> <br>
+    Nota 02: <input type="text" id="n2"> <br> <br>
+    <!--Esta botando um evento no botão chamado onclick, tem que botar os ()-->
+    <button onclick="calcular()">Calcular</button>
+    <script>
+        //agora estou fazendo uma função.
+        //OBS: tem que estar do jeito que vc botou no evento
+        function calcular(){
+            //está atribuido valores para as variaves, pegando do id dos inputs
+            //OBS: a letra "N" do number tem que ser maiuscula
+            var n1 = Number(document.getElementById('n1').value)
+            var n2 = Number(document.getElementById('n2').value)
+            //calculou a media
+            var media= (n1+n2)/2
+            //está vendo c a media é maior ou igual a 6   
+            if(media>6){
+                //está imprimindo
+                alert('Aprovado '+media)
+            }else{
+                //c não for maior ou igual a 6 vai imprimir isso
+                alert('Reprovado '+media)
+            }
+        }
+    </script>
+</body>
+</html>
